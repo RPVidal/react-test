@@ -17,14 +17,14 @@ const Card = ({titleObject}) => {
 
   useEffect(() => {
     if (count > 10) {
-      setCount(0)
+      setCount(0) 
     }
   }, [count])
 
   return (
     <div onClick={() => setCount(count + 1)}>
-      <h2>{titleObject.movieTitle}</h2>
-      <button onClick={() => setHasLiked(!hasLiked) }>{hasLiked ? `${count} 🤍` : `${count} ❤️`}</button>
+      <h2 className="text-2xl font-bold">{titleObject.movieTitle}</h2>
+      <button className="bg-blue-500 text-white p-2 rounded-md" onClick={() => setHasLiked(!hasLiked) }>{hasLiked ? `${count} 🤍` : `${count} ❤️`}</button>
     </div>
   )
 }
